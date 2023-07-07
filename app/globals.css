@@ -2,26 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@layer components{
+    body{
+        @apply  bg-blue-50/60
+    }
+    .inpt{
+        @apply mx-4 pl-2 border border-gray-200 rounded-sm my-2 text-sm py-2 
+    }
+    #inpt-2{
+        @apply w-full
+    }
+    .symbol{
+        @apply text-xs rounded-full px-1 bg-gray-400 text-white
+    }
+    .radio-field{
+        @apply border border-gray-200 mx-4 my-2 py-2 w-full 
+    }
+    .radio-text{
+        @apply float-left items-center ml-2 text-sm 
+    }
+    .radio-box{
+        @apply float-right  my-auto mr-2 mt-1
+    }
+    .link-text{
+        @apply hover:underline  hover:cursor-pointer text-blue-700
+    }
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@media only screen and (max-width: 600px) {
+    .radio-text{
+        font-size: 8px;
+        font-weight: 600;
+    }
 }

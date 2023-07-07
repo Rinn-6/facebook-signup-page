@@ -1,113 +1,70 @@
-import Image from 'next/image'
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="my-5 ">
+    <Image
+    className="mx-auto mb-6"
+    src={"https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg"}
+    width={200}
+    height={100}
+    alt="Facebook Logo Image"
+    />
+    <form>
+     <div className="bg-white text-center items-center mx-auto py-2
+       border rounded-xl  shadow-lg w-[60%]  2xl:w-1/4 xl:w-1/3">
+        <h3 className="font-semibold text-2xl">Create a new account</h3>
+        <p className="text-sm">It's quick and easy.</p>
+        <hr className="my-3"/>
+    
+     <div className="flex flex-col">
+      <input className="inpt" type="text" placeholder="First Name"/>
+      <input className="inpt" type="text" placeholder="Surname"/>
+      <input className="inpt" type="email" placeholder="Mobile number or email address"/>
+      <input className="inpt" type="password" placeholder="New Password"/>
+     </div>
+
+     {/* Date of birth field */}
+     <div>
+      <p className="text-start ml-4 text-sm pt-2">Date of birth <span className="symbol">?</span></p>
+      <label className="flex">
+        <input className="inpt" id="inpt-2" type="text" placeholder="Day"/>
+        <input className="inpt" id="inpt-2" type="text" placeholder="Month"/>
+        <input className="inpt" id="inpt-2" type="text" placeholder="Year"/>
+      </label>
+     </div>
+
+     {/* Gender field */}
+     <div className="text-sm">
+      <p className="text-start ml-4 pt-2">Gender <span className="symbol">?</span></p>
+      <label className="label flex flex-row  w-full items-center">
+        <div className="radio-field">
+          <span className="radio-text">Female</span>
+          <input className="radio-box" type="radio" name="gender" value={"female"} />
         </div>
+        <div className="radio-field">
+          <span className="radio-text">Male</span>
+          <input className="radio-box" type="radio" name="gender" value={"male"} />
+        </div>
+        <div className="radio-field">
+          <span className="radio-text">Custom</span>
+          <input className="radio-box" type="radio" name="gender" value={"custom"} />
+        </div>
+      </label>
+     </div>
+
+     <p className="text-xs m-4 text-start">People who use our service may have uploaded your contact information to Facebook.
+      <span className="link-text"> Learn more.</span></p>
+      <p className="text-xs text-start m-4">By clicking Sign Up, you agree to our
+      <span className="link-text"> Terms</span>,
+      <span className="link-text"> Privacy Policy</span> and
+      <span className="link-text"> Cookies Policy</span>. You may receive SMS notifications from us and can opt out at any time.
+      </p>
+      <button className="rounded-lg my-4 bg-green-600 text-white font-bold px-14 py-2">Sign Up</button>
+      <span className="hover:cursor-pointer text-blue-600 block pb-4"> Already have an account?</span>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </form>
+   </div>
   )
 }
